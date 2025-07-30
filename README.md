@@ -217,6 +217,4 @@ The Random Forest classifier is trained on a comprehensive phishing dataset with
 
 This project is for educational and research purposes.
 
-## ⚠️ Disclaimer
-
-This tool is for educational purposes. Always use multiple security measures and don't rely solely on automated detection for critical security decisions. 
+Built by Shiva Sai 👨🏻‍💻
