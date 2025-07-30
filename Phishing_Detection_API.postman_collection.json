@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "phishing-detection-api",
+		"name": "Phishing Detection API",
+		"description": "Collection for testing the Phishing Detection API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Safe URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://www.google.com\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Suspicious URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://paypal-secure-login.xyz\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict IP Address URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://192.168.1.1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Invalid Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"wrong_field\": \"https://example.com\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Empty Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+} 
