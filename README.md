@@ -2,6 +2,7 @@
 
 A machine learning-based phishing detection system with a Flask API backend and Chrome browser extension frontend.
 
+Trained Dataset : https://www.kaggle.com/datasets/muhammadfaizanhassan/phiusiil-phishing-url-website
 ## 🚀 Features
 
 - **Real-time URL Analysis**: Analyzes URLs for phishing indicators
